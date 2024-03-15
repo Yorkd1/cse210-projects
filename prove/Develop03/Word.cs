@@ -11,16 +11,19 @@ public class Word
         _isHidden = false;
     }
 
+    // sets member variable to true for all words hidden
     public void Hide()
     {
         _isHidden = true;
     }
 
+    // sets member variable to false for all words not hidden
     public void Show()
     {
         _isHidden = false;
     }
 
+    // return _isHidden value
     public bool IsHidden()
     {
         return _isHidden;

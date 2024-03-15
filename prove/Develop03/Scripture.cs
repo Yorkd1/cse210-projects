@@ -6,6 +6,7 @@ public class Scripture
     private Reference _reference;
     private List<Word> _words = new List<Word>();
 
+    // interate through scripture and add words to a list
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
@@ -17,6 +18,7 @@ public class Scripture
         }
     }
 
+    // create an algorithm that selects words from list 
     public void HideRandomWords(int numberToHide)
     {
         Random random = new Random();
@@ -27,6 +29,7 @@ public class Scripture
         }
     }
 
+    // display scripture as it should appear
     public string GetDisplayText()
     {
         List<string> parts = new List<string>();
@@ -43,6 +46,7 @@ public class Scripture
         
     }
 
+    // checks to see if words are underscores through the IsHidden method
     public bool IsCompletelyHidden()
     {
         return _words.All(word => word.IsHidden());
