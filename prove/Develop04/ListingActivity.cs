@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 public class ListingActivity : Activity
 {
-    // create list of listing activity prompts
+    // create a list for listing activity prompts
     private List<string> listingPrompts = new List<string>
     {
         "Who are people that you appreciate?",
@@ -13,13 +13,14 @@ public class ListingActivity : Activity
         "Who are some of your personal heroes?"
     };
 
-    
+    // create new values for parent class member variables
     public ListingActivity() : base()
     {
         _name = "Listing Activity";
         _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
     }
 
+    // make the method for the Listing Activity
     public void Run()
     {
         DisplayStartingMessage();
@@ -36,6 +37,7 @@ public class ListingActivity : Activity
 
     }
 
+    // Get random prompt for the user and create method to display the prompt
     public string GetListingPrompt()
     {
         Random rand = new Random();
@@ -48,6 +50,7 @@ public class ListingActivity : Activity
         Console.WriteLine($"---{GetListingPrompt()}---");
     }
 
+    // use the _duration to determine time spent of activity then count the user's entries
     public void GetUserEntries(int seconds)
     {
         DateTime start = DateTime.Now;

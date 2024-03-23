@@ -3,6 +3,7 @@ using System.Reflection;
 
 public class ReflectingActivity : Activity
 {
+    // create lists for prompts and questions
     private List<string> prompts = new List<string>
     {
         "Think of a time when you stood up for someone else.",
@@ -24,12 +25,14 @@ public class ReflectingActivity : Activity
         "How can you keep this experience in mind in the future?"
     };
 
+    // create new values for parent class member variables
     public ReflectingActivity() : base()
     {
         _name = "Reflecting Activity";
         _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
     }
 
+    // Create the reflecting activity
     public void Run()
     {
         DisplayStartingMessage();
@@ -52,6 +55,7 @@ public class ReflectingActivity : Activity
         DisplayEndingMessage();
     }
 
+    // create methods to retrieve prompts and questions
     public string GetRandomPrompt()
     {
         Random random = new Random();

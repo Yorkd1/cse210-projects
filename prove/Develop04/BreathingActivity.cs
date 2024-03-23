@@ -2,6 +2,7 @@ using System;
 
 public class BreathingActivity : Activity
 {
+    // create new values for parent class member variables
     public BreathingActivity() : base()
     {
         _name = "Breathing Activity";
