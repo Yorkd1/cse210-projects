@@ -8,8 +8,7 @@ public class CombatManager
 
     public void Start()
     {
-        Console.WriteLine("Welcome to Unit Clash!");
-        Console.WriteLine("Option Menu:");
+        Console.WriteLine("\nOption Menu:");
         Console.WriteLine("1. Fight a Warrior.");
         Console.WriteLine("2. Fight a Rogue.");
         Console.WriteLine("3. Fight a Mage.");
@@ -22,7 +21,7 @@ public class CombatManager
     {
         
         Console.WriteLine("\nYour turn:");
-        Console.WriteLine("Type 'a' to attack or 'h' to heal.");
+        Console.WriteLine("Type 'a' to attack or 'h' to heal. If you want to use your ablility type 'z'.");
         string playerChoice = Console.ReadLine();
 
         if (playerChoice == "a")
@@ -32,6 +31,10 @@ public class CombatManager
         else if (playerChoice == "h")
         {
             player.Heal();
+        }
+        else if (playerChoice == "z")
+        {
+            player.Ability();
         }
         else
         {
@@ -43,7 +46,7 @@ public class CombatManager
     public void EnemyTurn(Unit player, Unit enemy)
     {
         Console.WriteLine("\nEnemy turn:");
-        int enemyChoice = random.Next(0, 2);
+        int enemyChoice = random.Next(0, 3);
 
         if (enemyChoice == 0)
         {
@@ -53,6 +56,11 @@ public class CombatManager
         else if (enemyChoice == 1)
         {
             enemy.Heal();
+        }
+
+        else if (enemyChoice == 2)
+        {
+            enemy.Ability();
         }
     }
 }
